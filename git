@@ -1,0 +1,5 @@
+mkdir xx   #创建目录xx
+cd xx #移动工作目录到xx
+git init  #在当前工作目录创建仓库
+git add  xxx.txt   #添加文件到暂存区
+git commit -m"xxxxxxxx" 将暂存区所有的文件都上传到工作区，并添加xxxxx描述
