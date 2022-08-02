@@ -3,3 +3,18 @@ cd xx #移动工作目录到xx
 git init  #在当前工作目录创建仓库
 git add  xxx.txt   #添加文件到暂存区
 git commit -m"xxxxxxxx" 将暂存区所有的文件都上传到工作区，并添加xxxxx描述
+
+#连接git到github
+ssh-keygen -t rsa -C "1980546496@qq.com"  #获取密钥和公钥
+#打开github setting，在SSH KEYs将刚刚获取的公钥复制进去
+
+#配置git的账户和邮箱
+git config --global user.name "xxxxxx"
+git config --global user.email "xxxxx"
+
+#c测试是否连接成功
+ssh -T git@github.com
+
+#建立本地库与github上库的连接
+git remote add origin git@github.com:用户名/xxxx.git
+git push -u master   #将本地库的内容作为master分支上传到github上
